@@ -1,0 +1,72 @@
+{
+  "products":[
+    {
+      "id": 1,
+      "name": "iPhone 13",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "imageUrl": "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mlvc3tua-apple-iphone-13-pro-128gb-altin-637678394638401462.jpg",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "name": "iPhone 11",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/113156_large.jpg",
+      "price": 600
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi Redmi Note 7",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
+      "imageUrl": "https://mobilge.com/resimler/2019/01/xiaomi-redmi-note-7-1.jpg",
+      "price": 100
+    },
+    {
+      "id": 4,
+      "name": "Samsung",
+      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/samsung/thumb/117724-anaa_large.jpg",
+      "price": 700
+    },
+    {
+      "id": 5,
+      "name": "Samsung",
+      "description": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/samsung/thumb/121933-3_large.jpg",
+      "price": 500
+    },
+    {
+      "id": 6,
+      "name": "Vivo",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      "imageUrl": "https://bireysel.turktelekom.com.tr/cihazlar/publishingimages/telefon/vivo-v21-white.jpg",
+      "price": 350
+    },
+    {
+      "id": 7,
+      "name": "Nokia 3310",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.",
+      "imageUrl": "http://www.bilisimgezegeni.com/wp-content/uploads/2017/02/Nokia-3310-bilisimgezegenicom.png",
+      "price": 1
+    }
+  ],
+
+
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -15,7 +15,9 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService) { } //dependency injection
 
   ngOnInit(): void {
-   this.productList = this.productService.getProducts();
+   this.productService.getProducts().subscribe((products) => {
+    this.productList = products;
+   })
   }
 
 }
