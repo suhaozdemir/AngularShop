@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { MessengerService } from 'src/app/services/messenger.service';
+import { CartService } from 'src/app/services/cart.service';
+import { CartItem } from 'src/app/models/cart-item';
 
 @Component({
   selector: 'app-cart',
@@ -10,28 +12,37 @@ import { MessengerService } from 'src/app/services/messenger.service';
 export class CartComponent implements OnInit {
 
   //Sepetteki urunler
-  cartItems = Array();
-    //{ id: 1, productId: 1, productName: 'Test 1', qty: 4, price: 100 },
-    // { id: 2, productId: 3, productName: 'Test 3', qty: 5, price: 50 },
-    // { id: 3, productId: 2, productName: 'Test 2', qty: 3, price: 150 },
-    // { id: 4, productId: 4, productName: 'Test 4', qty: 2, price: 200 },
-  
+  cartItems = Array(); 
 
   cartTotal = 0;
 
-  constructor(private msg: MessengerService) { }
+  constructor(private msgService: MessengerService,
+    private cartService: CartService) { }
 
   //Init durumunda sepetteki urunlerin toplam fiyatini gostermek icin
   ngOnInit() {
-    this.msg.getMsg().subscribe((product: Product) => {
-      this.addProductToCart(product)
+    this.handleSubscription();    
+    this.getCartItems();
+ }
+
+ handleSubscription(){
+  this.msgService.getMsg().subscribe((product: Product) => {
+    this.getCartItems();
   })
  }
+
+ getCartItems(){
+   this.cartService.getCartItems().subscribe((items: CartItem[]) =>{
+     console.log(items)
+   })
+ }
  
+ //Sepete urun ekleme fonksiyonu 
  addProductToCart(product: Product) {
 
   let productExists = false
 
+  //sepetteki urun id ile normal urun idsi kiyaslanir boylece quantity arttirilir
   for (let i in this.cartItems) {
     if (this.cartItems[i].productId === product.id) {
       this.cartItems[i].qty++
@@ -40,6 +51,7 @@ export class CartComponent implements OnInit {
     }
   }
 
+  //urun varsa pushlanir
   if (!productExists) {
     this.cartItems.push({
       productId: product.id,
@@ -70,6 +82,10 @@ export class CartComponent implements OnInit {
   //   }
   // }
 
+  this.calculateCartTotal();
+}
+
+calculateCartTotal(){
   this.cartTotal = 0
   this.cartItems.forEach(item => {
     this.cartTotal += (item.qty * item.price)

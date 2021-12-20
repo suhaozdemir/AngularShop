@@ -13,7 +13,6 @@ export class CartItem {
         this.name = product.name
         this.qty = qty
         this.price = product.price
-
     }
 
 }
