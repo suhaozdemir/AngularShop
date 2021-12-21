@@ -33,58 +33,11 @@ export class CartComponent implements OnInit {
 
  getCartItems(){
    this.cartService.getCartItems().subscribe((items: CartItem[]) =>{
-     console.log(items)
+     this.cartItems = items;
+     this.calculateCartTotal();
    })
  }
  
- //Sepete urun ekleme fonksiyonu 
- addProductToCart(product: Product) {
-
-  let productExists = false
-
-  //sepetteki urun id ile normal urun idsi kiyaslanir boylece quantity arttirilir
-  for (let i in this.cartItems) {
-    if (this.cartItems[i].productId === product.id) {
-      this.cartItems[i].qty++
-      productExists = true
-      break;
-    }
-  }
-
-  //urun varsa pushlanir
-  if (!productExists) {
-    this.cartItems.push({
-      productId: product.id,
-      productName: product.name,
-      qty: 1,
-      price: product.price
-    })
-  }
-  // if (this.cartItems.length === 0) {
-  //   this.cartItems.push({
-  //     productId: product.id,
-  //     productName: product.name,
-  //     qty: 1,
-  //     price: product.price
-  //   })
-  // } else {
-  //   for (let i in this.cartItems) {
-  //     if (this.cartItems[i].productId === product.id) {
-  //       this.cartItems[i].qty++
-  //     } else {
-  //       this.cartItems.push({
-  //         productId: product.id,
-  //         productName: product.name,
-  //         qty: 1,
-  //         price: product.price
-  //       })
-  //     }
-  //   }
-  // }
-
-  this.calculateCartTotal();
-}
-
 calculateCartTotal(){
   this.cartTotal = 0
   this.cartItems.forEach(item => {

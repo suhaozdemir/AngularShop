@@ -4,8 +4,11 @@
     <div class="card-body">
       <p class="card-text">
         <strong>{{productItem.name}}</strong>
+        <i *ngIf="addedToWishlist" class="fas fa-bookmark" (click)="handleRemoveFromWishlist()"></i>
+        <i *ngIf="!addedToWishlist"class="far fa-bookmark" (click)="handleAddToWishlist()"></i>
         <br>
         <strong>{{ productItem.price | currency: 'EUR' }}</strong>
+        
       </p>
       <p class="card-text">{{ productItem.description | slice: 0:80 }}...</p>
       <div class="d-flex justify-content-between align-items-center">

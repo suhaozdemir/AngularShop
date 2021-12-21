@@ -20,9 +20,10 @@ export class CartService {
   getCartItems(): Observable<CartItem[]>{
     return this.http.get<CartItem[]>(cartUrl).pipe(
       map((cartResult: any[]) => {
+        let cartItems: CartItem[] = [];
 
         for(let cartItem of cartResult){
-          let cartItems: CartItem[] = [];
+          
         let productExists = false
 
         //sepetteki urun id ile normal urun idsi kiyaslanir boylece quantity arttirilir
@@ -36,10 +37,9 @@ export class CartService {
       
         //urun varsa pushlanir
         if (!productExists) {
-          cartItems.push(new CartItem(cartItem.id, cartItem.name, cartItem.product))
+          cartItems.push(new CartItem(cartItem.id, cartItem.product))
         }
-        }
-        
+      }        
         return cartItems;
       })
     );

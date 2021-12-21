@@ -23,4 +23,11 @@
   .product-btn {
     font-size: medium;
   }
+
+  .fa-bookmark{
+    padding-top: 3%;
+    float: right;
+    color: #0d6efd;
+    cursor: pointer;
+  }
   
