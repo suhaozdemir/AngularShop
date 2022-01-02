@@ -3,6 +3,7 @@ import { Product } from 'src/app/models/product';
 
 import { ProductService } from 'src/app/services/product.service';
 import { WishlistService } from 'src/app/services/wishlist.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -16,7 +17,8 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private wishlistService: WishlistService
+    private wishlistService: WishlistService,
+    private activatedRoute: ActivatedRoute
     ) { } //dependency injection
 
   ngOnInit(): void {
@@ -25,9 +27,11 @@ export class ProductListComponent implements OnInit {
   }
 
   getProducts(){
-    this.productService.getProducts().subscribe((products) => {
-      this.productList = products;      
-     })
+    this.activatedRoute.params.subscribe(params=>{
+      this.productService.getProducts(params["catID"]).subscribe((products) => { 
+        this.productList = products;      
+       })
+    })    
   }
 
   getWishlist(){

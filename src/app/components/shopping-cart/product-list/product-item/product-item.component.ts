@@ -41,5 +41,4 @@ export class ProductItemComponent implements OnInit {
       this.addedToWishlist = false;
     })
   }
-
 }

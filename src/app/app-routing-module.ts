@@ -10,6 +10,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'shop', component: ShoppingCartComponent},
+    { path: 'shop/category/:catID', component: ShoppingCartComponent},
     { path: '**', component: PageNotFoundComponent}
 ]
 
