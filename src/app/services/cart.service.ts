@@ -17,6 +17,10 @@ export class CartService {
     return this.http.post(cartUrl, {product});
   }
 
+  removeProductFromCart(product: Product) {
+    return this.http.delete(cartUrl + '/' + product.id);
+  }
+
   getCartItems(): Observable<CartItem[]>{
     return this.http.get<CartItem[]>(cartUrl).pipe(
       map((cartResult: any[]) => {

@@ -22,11 +22,20 @@
   
   .product-btn {
     font-size: medium;
+    justify-content: center;
+    display: flex;
   }
 
   .fa-bookmark{
     padding-top: 3%;
     float: right;
     color: #0d6efd;
+    cursor: pointer;
+  }
+
+  .fa-times{
+    padding-top: 3%;
+    float: right;
+    color: #ff1e00;
     cursor: pointer;
   }

@@ -1,6 +1,7 @@
 <div class="cart-item">
-    <span>{{ cartItem.productName }}</span> x 
+    <span>{{ cartItem.name }}</span> x
     <span>{{ cartItem.qty }}</span>: 
-    <strong>{{ (cartItem.price * cartItem.qty) | currency:'EUR' }}</strong>
+    <strong>{{ (cartItem.price * cartItem.qty) | currency:'EUR' }} </strong>
+    <i class="fas fa-times" (click)="handleRemoveFromCart()" ></i>
   </div>
   

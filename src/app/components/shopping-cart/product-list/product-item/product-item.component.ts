@@ -29,7 +29,7 @@ export class ProductItemComponent implements OnInit {
       this.msg.sendMsg(this.productItem)
     })
   }
-
+  
   handleAddToWishlist(){
     this.wishService.addToWishList(this.productItem.id).subscribe(() => {
       this.addedToWishlist = true;
