@@ -1,5 +1,15 @@
 <div class="card filters">
 
+  <div class="card-header">
+    <strong>Categories</strong>
+  </div>
+  <div class="list-group">
+    <a class="list-group-item" routerLink="">All Phones</a>
+    <div *ngFor="let category of categories" class="list-group">
+      <a class="list-group-item" routerLink="/shop/category/{{category.id}}">{{category.name}}</a>
+    </div>
+  </div>
+
     <div class="card-header">
       <strong>Filters</strong>
     </div>
