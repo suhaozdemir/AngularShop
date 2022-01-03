@@ -4,4 +4,5 @@ export const baseUrl = environment.production ? 'https://api.shoppingcart.com' :
 export const cartUrl = baseUrl + '/cart'
 export const productUrl = baseUrl + '/products'
 export const categoryUrl = productUrl + '?category='
+export const priceUrl = productUrl + '?price='
 export const wishlistUrl = baseUrl + '/wishlist'

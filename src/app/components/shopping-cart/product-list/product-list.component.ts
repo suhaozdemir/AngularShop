@@ -22,13 +22,14 @@ export class ProductListComponent implements OnInit {
     ) { } //dependency injection
 
   ngOnInit(): void {
+    
     this.getProducts();
     this.getWishlist();
   }
 
   getProducts(){
     this.activatedRoute.params.subscribe(params=>{
-      this.productService.getProducts(params["catID"]).subscribe((products) => { 
+      this.productService.getProducts(params["catID"], params["price"]).subscribe((products) => { 
         this.productList = products;      
        })
     })    
