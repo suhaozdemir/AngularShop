@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/category';
 import { Prices } from 'src/app/models/prices';
+import { CategoryService } from 'src/app/services/category.service';
+import { PriceService } from 'src/app/services/price.service';
 
 @Component({
   selector: 'app-filters',
@@ -9,28 +11,26 @@ import { Prices } from 'src/app/models/prices';
 })
 export class FiltersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private categoryService : CategoryService,
+    private priceService : PriceService) { }
   title = "Categories"
-  categories: Category[] = [
-    {id: 1, name: "iPhone"},
-    {id: 2, name: "Xiaomi"},
-    {id: 3, name: "Samsung"},
-    {id: 4, name: "Vivo"},
-    {id: 5, name: "Nokia"},
-  ];
+  categories: Category[] = [];
+  prices: Prices[] = [];
 
-  prices: Prices[] = [
-    {price: 1000},
-    {price: 700},
-    {price: 600},
-    {price: 500},
-    {price: 350},
-    {price: 100},
-    {price: 1},
-  ];
-  
-
-  ngOnInit(): void {
+  getCategories(){
+    return this.categoryService.getCategories().subscribe(categoryNames => {
+      this.categories = categoryNames;
+    });
   }
 
+  getPrices(){
+    return this.priceService.getPrices().subscribe(prices => {
+      this.prices = prices;
+    })
+  }  
+
+  ngOnInit(): void {
+    this.getCategories();
+    this.getPrices();
+  }
 }

@@ -69,19 +69,21 @@
       "id": 5
     }
   ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
+  "categories": [
+    {"id": 1, "name": "iPhone"},
+    {"id": 2, "name": "Xiaomi"},
+    {"id": 3, "name": "Samsung"},
+    {"id": 4, "name": "Vivo"},
+    {"id": 5, "name": "Nokia"}
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
+  "prices": [
+    {"price": 1000},
+    {"price": 700},
+    {"price": 600},
+    {"price": 500},
+    {"price": 350},
+    {"price": 100},
+    {"price": 1}
   ],
   "profile": {
     "name": "typicode"
