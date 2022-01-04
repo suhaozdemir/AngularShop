@@ -11,7 +11,7 @@ import { CartItem } from 'src/app/models/cart-item';
 })
 export class CartComponent implements OnInit {
 
-  //Sepetteki urunler
+
   cartItems = Array(); 
 
   cartTotal = 0;
@@ -19,10 +19,9 @@ export class CartComponent implements OnInit {
   constructor(private msgService: MessengerService,
     private cartService: CartService) { }
 
-  //Init durumunda sepetteki urunlerin toplam fiyatini gostermek icin
   ngOnInit() {
-    this.handleSubscription();    
-    this.getCartItems();
+    this.handleSubscription();
+    this.getCartItems();   
  }
 
  handleSubscription(){

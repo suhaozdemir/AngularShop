@@ -53,8 +53,16 @@
       "category": 5,
       "name": "Nokia 3310",
       "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni.",
-      "imageUrl": "http://www.bilisimgezegeni.com/wp-content/uploads/2017/02/Nokia-3310-bilisimgezegenicom.png",
+      "imageUrl": "https://teknoseyir.com/wp-content/uploads/2015/12/8c2c944d29394553.jpg",
       "price": 1
+    },
+    {
+      "category": "4",
+      "name": "Vivo Y21S",
+      "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/vivo/thumb/130675-2-1_large.jpg",
+      "price": "600",
+      "id": 8
     }
   ],
   "cart": [],
@@ -67,23 +75,55 @@
     },
     {
       "id": 5
+    },
+    {
+      "id": 8
     }
   ],
   "categories": [
-    {"id": 1, "name": "iPhone"},
-    {"id": 2, "name": "Xiaomi"},
-    {"id": 3, "name": "Samsung"},
-    {"id": 4, "name": "Vivo"},
-    {"id": 5, "name": "Nokia"}
+    {
+      "id": 1,
+      "name": "iPhone"
+    },
+    {
+      "id": 2,
+      "name": "Xiaomi"
+    },
+    {
+      "id": 3,
+      "name": "Samsung"
+    },
+    {
+      "id": 4,
+      "name": "Vivo"
+    },
+    {
+      "id": 5,
+      "name": "Nokia"
+    }
   ],
   "prices": [
-    {"price": 1000},
-    {"price": 700},
-    {"price": 600},
-    {"price": 500},
-    {"price": 350},
-    {"price": 100},
-    {"price": 1}
+    {
+      "price": 1000
+    },
+    {
+      "price": 700
+    },
+    {
+      "price": 600
+    },
+    {
+      "price": 500
+    },
+    {
+      "price": 350
+    },
+    {
+      "price": 100
+    },
+    {
+      "price": 1
+    }
   ],
   "profile": {
     "name": "typicode"

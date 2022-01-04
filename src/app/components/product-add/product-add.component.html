@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="guest-form-card card">
+  
+        <div class="card-header text-center">
+          <h2>Add Product</h2>
+        </div>
+  
+        <div class="card-body">
+          <form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select
+                name="category"
+                class="form-control"        
+                formControlName="category">
+            <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+            </select>  
+              <span class="invalid-feedback">Name can't be blank.</span>
+            </div>
+  
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                class="form-control"
+                formControlName="name"
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input
+                id="description"
+                class="form-control"
+                formControlName="description"
+              />
+              <span class="invalid-feedback">Username can't be blank.</span>
+            </div>
+  
+            <div class="form-group">
+              <label for="imageUrl">Image</label>
+              <input
+                id="imageUrl"
+                class="form-control"
+                formControlName="imageUrl"
+              />
+            </div>
+  
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input
+                id="price"
+                class="form-control"
+                formControlName="price"
+              />
+              <span class="invalid-feedback">Passwords must match.</span>
+            </div>
+  
+            <button class="btn btn-primary btn-block" [disabled]="addProductForm.invalid">Add Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

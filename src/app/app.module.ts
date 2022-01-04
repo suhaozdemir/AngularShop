@@ -19,6 +19,10 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductAddComponent } from './components/product-add/product-add.component';
+import { CategoryService } from './services/category.service';
+import { ProductService } from './services/product.service';
+import { PriceService } from './services/price.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductItemComponent,
     LoginComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [CategoryService, ProductService, PriceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,7 +12,7 @@ export class MessengerService {
   constructor() { }
 
   sendMsg(product: any){
-    this.subject.next(product); //Trigger an event
+    this.subject.next(product);
   }
 
   getMsg(){
