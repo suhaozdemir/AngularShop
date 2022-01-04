@@ -44,6 +44,7 @@ export class ProductAddComponent implements OnInit {
   addProduct(){
     if(this.addProductForm.valid){
       this.product = this.addProductForm.value
+      this.price = this.addProductForm.get('price')?.value;
       this.productService.addProduct(this.product).subscribe(product => {
         // this.addPrice();
       })
@@ -51,10 +52,9 @@ export class ProductAddComponent implements OnInit {
   }
 
   // addPrice(){
-  //   if(this.addProductForm.valid){
-  //     this.price = this.addProductForm.controls['price'].value;
+  //   if(this.addProductForm.valid){      
   //     this.priceService.addPrice(this.price).subscribe(price => {
-  //       console.log(this.price);
+  //       console.log(price);
   //     })
   //   }
   // }

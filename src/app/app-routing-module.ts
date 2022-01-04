@@ -11,7 +11,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'product-add', component: ProductAddComponent},
-    { path: 'shop', component: ShoppingCartComponent},    
+    { path: 'shop', component: ShoppingCartComponent},
     { path: 'shop/category/:catID', component: ShoppingCartComponent},
     { path: 'shop/price/:price', component: ShoppingCartComponent},
     { path: '**', component: PageNotFoundComponent}

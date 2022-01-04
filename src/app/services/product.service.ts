@@ -7,10 +7,7 @@ import { priceUrl,categoryUrl, productUrl } from 'src/config/api';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {  
-
-
-
+export class ProductService {
   constructor(private http: HttpClient) { }
 
   addProduct(product:Product): Observable<any>{
