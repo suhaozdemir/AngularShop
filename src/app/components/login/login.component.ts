@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/app/models/user';
+import { AccountService } from 'src/app/services/account.service';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  model: any = {}
+  model: User = new User();
 
-  constructor() { }
+  constructor(private accService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    console.log(this.model);
+   if(this.accService.login(this.model)){
+     console.log(this.model)
+     this.router.navigate(['shop']);
+   }
+   else{
+     console.log('error');
+   }
+  
   }
 
 }

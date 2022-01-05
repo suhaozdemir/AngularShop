@@ -9,5 +9,6 @@
 
         </nav>
         <a class="me-3 py-2 text-blue text-decoration-none" [routerLink]="['/register']">Sign up</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" [routerLink]="['/login']">Login</a>
+        <a *ngIf="isLoggedIn()==false"class="me-3 py-2 text-dark text-decoration-none" [routerLink]="['/login']">Login</a>
+        <a *ngIf="isLoggedIn()==true"class="me-3 py-2 text-dark text-decoration-none" [routerLink]="['/login']">Logout</a>        
 </div>

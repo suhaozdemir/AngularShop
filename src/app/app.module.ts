@@ -23,6 +23,7 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { CategoryService } from './services/category.service';
 import { ProductService } from './services/product.service';
 import { PriceService } from './services/price.service';
+import { LoginGuard } from './components/login/login-guard';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { PriceService } from './services/price.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [CategoryService, ProductService, PriceService],
+  providers: [CategoryService, ProductService, PriceService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
